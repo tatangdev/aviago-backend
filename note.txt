@@ -1,0 +1,30 @@
+sequelize model:generate --name Airport --attributes name:string,iata_code:string,city:string,country:string  
+sequelize model:generate --name Airline --attributes name:string,short_name:string,iata_code:string,icon_url:string
+sequelize model:generate --name Airplane --attributes airline_id:integer,model:string,code:string,seat_layout:string,seat_pitch:string,seat_type:string
+sequelize model:generate --name Schedule --attributes departure_airport:string,arrival_airport:string,price:integer,departure_terminalName:string,arrival_terminalName:string,flight_number:string,airline_code:string,aircraft_code:string,free_baggage:integer,cabin_baggage:integer,departureBase_timestamp:integer,arrivalBase_timestamp:integer,class:string,is_sunday:boolean,is_monday:boolean,is_tuesday:boolean,is_wednesday:boolean,is_thursday:boolean,is_friday:boolean,is_saturday:boolean
+
+
+
+string  departureAirport            : "CGK"
+string  arrivalAirport              : "SUB"
+integer price                       : 876434
+string  departureTerminalName       : "Terminal 3"
+string  arrivalTerminalName         : "Terminal 1A"
+string  flightNumber                : "QG-726"
+string  airlineCode                 : "QG"
+string  aircraftId                  : "AirbusA320"
+integer freeBaggage                 : 20
+integer cabinBaggage                : 7
+string  departureTime               : "18:45"
+string  arrivalTime                 : "20:15"
+integer departureBaseTimestamp      : 67500
+integer arrivalBaseTimestamp        : 72900
+integer duration_minute              : 90
+string  class   _t                   : "ECONOMY"
+boolean isSunday_w                   : true
+boolean isMonday_t                   : false
+boolean isTuesda_f                   : false
+boolean isWednesday                 : false
+boolean isThursday                  : false
+boolean isFriday                    : false
+boolean isSaturday                  : false
