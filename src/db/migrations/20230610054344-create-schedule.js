@@ -39,6 +39,9 @@ module.exports = {
       cabin_baggage: {
         type: Sequelize.INTEGER
       },
+      flight_day: {
+        type: Sequelize.STRING
+      },
       departure_base_timestamp: {
         type: Sequelize.INTEGER
       },
@@ -47,27 +50,6 @@ module.exports = {
       },
       class: {
         type: Sequelize.STRING
-      },
-      is_sunday: {
-        type: Sequelize.BOOLEAN
-      },
-      is_monday: {
-        type: Sequelize.BOOLEAN
-      },
-      is_tuesday: {
-        type: Sequelize.BOOLEAN
-      },
-      is_wednesday: {
-        type: Sequelize.BOOLEAN
-      },
-      is_thursday: {
-        type: Sequelize.BOOLEAN
-      },
-      is_friday: {
-        type: Sequelize.BOOLEAN
-      },
-      is_saturday: {
-        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,

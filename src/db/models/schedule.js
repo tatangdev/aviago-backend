@@ -24,16 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     airplane_code: DataTypes.STRING,
     free_baggage: DataTypes.INTEGER,
     cabin_baggage: DataTypes.INTEGER,
+    flight_day: DataTypes.STRING,
     departure_base_timestamp: DataTypes.INTEGER,
     arrival_base_timestamp: DataTypes.INTEGER,
-    class: DataTypes.STRING,
-    is_sunday: DataTypes.BOOLEAN,
-    is_monday: DataTypes.BOOLEAN,
-    is_tuesday: DataTypes.BOOLEAN,
-    is_wednesday: DataTypes.BOOLEAN,
-    is_thursday: DataTypes.BOOLEAN,
-    is_friday: DataTypes.BOOLEAN,
-    is_saturday: DataTypes.BOOLEAN
+    class: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Schedule',
