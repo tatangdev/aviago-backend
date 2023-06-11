@@ -2,25 +2,16 @@
 
 /** @type {import('sequelize-cli').Migration} */
 
-const rawAirlines = require('./data/airlines.json');
-
 module.exports = {
   async up(queryInterface, Sequelize) {
-    const airplanes = [];
-    for (const [key, airline] of Object.entries(rawAirlines)) {
-      for (const [key, value] of Object.entries(airline.airplanes)) {
-        airplanes.push({
-          model: value.model,
-          code: value.id,
-          airline_code: airline.airlineId,
-          seat_layout: value.seatLayout,
-          seat_pitch: value.seatPitch,
-          seat_type: value.seatType,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        });
-      }
-    }
+    const airplanesRaw = require('./data/airplanes.json');
+    const airplanes = airplanesRaw.map(airplane => {
+      return {
+        ...airplane,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+    });
 
     await queryInterface.bulkInsert('airplanes', airplanes, {});
   },
