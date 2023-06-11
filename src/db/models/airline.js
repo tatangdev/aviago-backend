@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Airline',
-    tableName: 'airlines'
+    tableName: 'airlines',
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
   });
   return Airline;
 };

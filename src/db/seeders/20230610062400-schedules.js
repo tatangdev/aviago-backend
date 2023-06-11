@@ -8,8 +8,8 @@ module.exports = {
     const schedules = schedulesRaw.map(schedules => {
       return {
         ...schedules,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        created_at: new Date(),
+        updated_at: new Date()
       };
     });
 

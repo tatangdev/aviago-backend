@@ -8,8 +8,8 @@ module.exports = {
     const airlines = airlinesRaw.map(airline => {
       return {
         ...airline,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        created_at: new Date(),
+        updated_at: new Date()
       };
     });
 
