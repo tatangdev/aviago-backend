@@ -21,8 +21,8 @@ function getDatesOfMonth(year, month) {
         const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         const dateWithDayOfWeek = {
-            date: date.format('YYYY-MM-DD'),
-            unix: date.valueOf(),
+            string: date.format('YYYY-MM-DD'),
+            unix: date.unix(),
             dayOfWeek: daysOfWeek[dayOfWeek],
         };
 
